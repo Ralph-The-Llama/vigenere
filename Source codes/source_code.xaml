@@ -1,0 +1,42 @@
+﻿<Window x:Class="titkosiras.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:titkosiras"
+        mc:Ignorable="d"
+        Title="Kódolás" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <DockPanel HorizontalAlignment="Left" Height="99" LastChildFill="False" Margin="10,10,0,0" VerticalAlignment="Top" Width="390">
+            <Label Content="Kódolás" HorizontalAlignment="Center" VerticalAlignment="Top" DockPanel.Dock="Top" FontSize="36"/>
+            <TextBlock Height="20" TextWrapping="NoWrap" Text="Szöveg:" VerticalAlignment="Top" DockPanel.Dock="Left"/>
+            <TextBox Name="kod_szoveg" Height="35" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="240" ToolTipService.ToolTip="Kódolni való szöveg" Margin="10,0,10,0" DockPanel.Dock="Right"/>
+        </DockPanel>
+        <DockPanel HorizontalAlignment="Left" Height="46" LastChildFill="False" Margin="10,114,0,0" VerticalAlignment="Top" Width="390">
+            <TextBlock Height="20" TextWrapping="Wrap" Text="Kulcs:" VerticalAlignment="Top" DockPanel.Dock="Left" />
+            <TextBox Name="kod_kulcs" Height="35" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Margin="20,0,10,0" ToolTipService.ToolTip="Kódoló kulcs (ajánlott rövidet megadni)" DockPanel.Dock="Right"/>
+        </DockPanel>
+        <DockPanel HorizontalAlignment="Left" Height="256" LastChildFill="False" Margin="10,165,0,0" VerticalAlignment="Top" Width="390">
+            <Label Content="Kódolt szöveg:" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" DockPanel.Dock="Top"/>
+            <TextBox Name="kodolt_szoveg" Height="70" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Center" Width="300" DockPanel.Dock="Top" Margin="0,50,0,20" IsReadOnly="True"/>
+            <Button Click="Kodolas" Content="Kódolás" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center" Width="75" DockPanel.Dock="Top"/>
+        </DockPanel>
+        <DockPanel HorizontalAlignment="Left" Height="104" LastChildFill="False" Margin="400,10,0,0" VerticalAlignment="Top" Width="384">
+            <Label Content="Dekódolás" VerticalAlignment="Top" DockPanel.Dock="Top" HorizontalAlignment="Center" FontSize="36"/>
+            <TextBox Name="de_szoveg" Height="35" TextWrapping="Wrap" Text="" Width="240" DockPanel.Dock="Right" VerticalAlignment="Top" Margin="0,0,10,0"/>
+            <TextBlock Height="20" TextWrapping="Wrap" Text="Szöveg:" VerticalAlignment="Top" Focusable="True"/>
+        </DockPanel>
+        <GridSplitter HorizontalAlignment="Left" Height="425" Margin="393,0,0,0" VerticalAlignment="Top" Width="5"/>
+        <DockPanel HorizontalAlignment="Left" Height="46" LastChildFill="False" Margin="400,114,0,0" VerticalAlignment="Top" Width="384">
+            <TextBlock Height="20" TextWrapping="Wrap" Text="Kulcs:" VerticalAlignment="Top" DockPanel.Dock="Left"/>
+            <TextBox Name="de_kulcs" Height="35" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" DockPanel.Dock="Right" Margin="0,0,10,0"/>
+        </DockPanel>
+        <DockPanel HorizontalAlignment="Left" Height="246" LastChildFill="False" Margin="405,165,0,0" VerticalAlignment="Top" Width="379">
+            <Label Content="Dekódolt szöveg:" VerticalAlignment="Top" DockPanel.Dock="Top" HorizontalAlignment="Center" FontSize="16"/>
+            <TextBox Name="dekodolt_szoveg" Height="70" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Center" Width="300" DockPanel.Dock="Top" Margin="0,50,0,20" IsReadOnly="True"/>
+            <Button Click="Dekodolas" Content="Dekódolás" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center" Width="75" DockPanel.Dock="Top"/>
+        </DockPanel>
+
+
+    </Grid>
+</Window>
